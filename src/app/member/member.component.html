@@ -1,0 +1,30 @@
+<p>member works!</p>
+
+<div class="col-md-6">
+    <h2> User Details</h2>
+     
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>FirstName</th>
+        <th>MiddleName</th>
+        <th>LastName</th>
+        <th>Gender</th>
+        <th>Dob</th>
+      </tr>
+    </thead>
+      <tbody>
+      <tr *ngFor="let member of members">
+        <td class="hidden">{{member.mId}}</td>
+        <td>{{member.firstName}}</td>
+        <td>{{member.lastName}}</td>
+        <td>{{member.middleName}}</td>
+        <td>{{member.gender}}</td>
+        <td>{{member.dob}}</td>
+
+        <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete User</button></td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
